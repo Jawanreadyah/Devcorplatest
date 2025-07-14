@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'PP Mori';
+  src: url('https://db.onlinewebfonts.com/t/2fb12ed9864fb524f12cfe6c53d3a9c7.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PP Mori';
+  src: url('https://db.onlinewebfonts.com/t/8bf247bbaa42f4875be8db3100b1d430.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sagner Bold';
+  src: url('./assets/fonts/sagner-bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Anton';
+  src: url('./assets/fonts/Anton-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  body {
+    @apply text-zinc-900 antialiased;
+    background-color: #E5E5E0;
+    font-family: 'PP Mori', sans-serif;
+    font-weight: 600;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'PP Mori', sans-serif;
+    font-weight: 800;
+  }
+
+  p, span, a, button, input, textarea, label {
+    font-family: 'PP Mori', sans-serif;
+    font-weight: 600;
+  }
+}
+
+.hero-text {
+  @apply text-[clamp(6rem,15vw,20rem)] leading-[0.7] tracking-tight font-extrabold;
+  font-family: 'Sagner Bold', 'PP Mori', sans-serif;
+  font-weight: bold;
+  width: 100%;
+  display: block;
+}
+
+.hero-text-anton {
+  @apply text-[clamp(4.5rem,9vw,7rem)] leading-[0.95] tracking-tight font-normal;
+  font-family: 'Anton', sans-serif;
+  font-weight: 400;
+  width: 100%;
+  display: block;
+}
+
+.service-item {
+  @apply transition-all duration-200;
+}
+
+.service-item:hover {
+  @apply -translate-x-4;
+}
+
+/* Animation classes */
+.animate-item {
+  opacity: 0;
+  transform: translateX(-50px);
+}
+
+.line {
+  transform-origin: left;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-20px) scale(1.02);
+  }
+  100% {
+    transform: translateY(0px) scale(1);
+  }
+}
+
+@keyframes float-delayed {
+  0% {
+    transform: translateY(-20px) scale(1.02);
+  }
+  50% {
+    transform: translateY(0px) scale(1);
+  }
+  100% {
+    transform: translateY(-20px) scale(1.02);
+  }
+}
+
+@keyframes pulse-delayed {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float-delayed 6s ease-in-out infinite;
+}
+
+.animate-pulse-delayed {
+  animation: pulse-delayed 3s ease-in-out infinite;
+}
+
+.float-1 {
+  animation: float 6s ease-in-out infinite;
+}
+
+.float-2 {
+  animation: float 7s ease-in-out infinite;
+}
+
+.float-3 {
+  animation: float 8s ease-in-out infinite;
+}
