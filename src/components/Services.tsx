@@ -46,19 +46,19 @@ export function Services() {
   };
 
   return (
-    <section id="services" className="mt-48">
-      <div className="inline-flex items-center gap-3 mb-24">
-        <span className="px-3 py-1 text-sm bg-black text-white rounded-full">SERVICES</span>
-        <div className="h-[1px] w-[200px] bg-black"></div>
+    <section id="services" className="mt-24 md:mt-48">
+      <div className="inline-flex items-center gap-2 md:gap-3 mb-8 md:mb-24">
+        <span className="px-2 md:px-3 py-1 text-xs md:text-sm bg-black text-white rounded-full">SERVICES</span>
+        <div className="h-[1px] w-[80px] md:w-[200px] bg-black"></div>
       </div>
 
-      <div className="grid grid-cols-12 gap-8">
-        <div className="col-span-12">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8">
+        <div className="col-span-1 md:col-span-12">
           <ServiceSection {...productDesignServices} />
-          <div className="mt-48">
+          <div className="mt-24 md:mt-48">
             <ServiceSection {...webflowServices} />
           </div>
-          <div className="mt-48">
+          <div className="mt-24 md:mt-48">
             <ServiceSection {...brandingServices} />
           </div>
         </div>

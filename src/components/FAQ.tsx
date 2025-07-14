@@ -44,38 +44,36 @@ export function FAQ() {
   };
 
   return (
-    <section id="faq" className="mt-48">
-      <div className="border-t border-black pt-8">
-        <span className="text-sm text-zinc-600 uppercase">FAQs</span>
-        
-        <div className="flex flex-col gap-12">
-          <div className="flex items-baseline gap-12">
-            <h2 className="text-[5rem] font-medium leading-none mt-12">Have Questions?</h2>
+    <section id="faq" className="mt-24 md:mt-48">
+      <div className="border-t border-black pt-6 md:pt-8">
+        <span className="text-xs md:text-sm text-zinc-600 uppercase">FAQs</span>
+        <div className="flex flex-col gap-6 md:gap-12">
+          <div className="flex flex-col md:flex-row items-baseline gap-4 md:gap-12">
+            <h2 className="text-2xl md:text-[5rem] font-medium leading-none mt-4 md:mt-12">Have Questions?</h2>
           </div>
-          
-          <div className="space-y-4">
+          <div className="space-y-2 md:space-y-4">
             {faqs.map((faq, index) => (
               <div 
                 key={index}
                 className="border-b border-black last:border-b-0"
               >
                 <button
-                  className="w-full py-6 flex items-center justify-between text-left"
+                  className="w-full py-4 md:py-6 flex items-center justify-between text-left"
                   onClick={() => toggleFAQ(index)}
                 >
-                  <span className="text-xl font-medium">{faq.question}</span>
+                  <span className="text-base md:text-xl font-medium">{faq.question}</span>
                   {faq.isOpen ? (
-                    <Minus className="w-6 h-6 flex-shrink-0" />
+                    <Minus className="w-5 md:w-6 h-5 md:h-6 flex-shrink-0" />
                   ) : (
-                    <Plus className="w-6 h-6 flex-shrink-0" />
+                    <Plus className="w-5 md:w-6 h-5 md:h-6 flex-shrink-0" />
                   )}
                 </button>
                 <div 
                   className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                    faq.isOpen ? 'max-h-48 pb-6' : 'max-h-0'
+                    faq.isOpen ? 'max-h-48 pb-4 md:pb-6' : 'max-h-0'
                   }`}
                 >
-                  <p className="text-zinc-600">{faq.answer}</p>
+                  <p className="text-zinc-600 text-sm md:text-base">{faq.answer}</p>
                 </div>
               </div>
             ))}

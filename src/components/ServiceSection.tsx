@@ -33,20 +33,17 @@ export function ServiceSection({ number, title, subtitle, description1, descript
   });
 
   return (
-    <div className="border-t border-black pt-8" ref={sectionRef}>
-      <span className="text-sm text-zinc-600 uppercase animate-item">{subtitle}</span>
-      
-      <div className="flex items-center gap-12">
-        <span className="text-[20rem] font-bold leading-none animate-item">{number}</span>
-        <h2 className="text-[5rem] font-medium leading-none mt-12 mb-16 animate-item">{title}</h2>
+    <div className="border-t border-black pt-6 md:pt-8" ref={sectionRef}>
+      <span className="text-xs md:text-sm text-zinc-600 uppercase animate-item">{subtitle}</span>
+      <div className="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-12 mt-4">
+        <span className="text-5xl md:text-[20rem] font-bold leading-none animate-item">{number}</span>
+        <h2 className="text-2xl md:text-[5rem] font-medium leading-none mt-4 md:mt-12 mb-4 md:mb-16 animate-item">{title}</h2>
       </div>
-      
-      <div className="grid grid-cols-2 gap-24">
-        <p className="text-lg text-zinc-600 animate-item">{description1}</p>
-        <p className="text-lg text-zinc-600 animate-item">{description2}</p>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-24 mt-4 md:mt-0">
+        <p className="text-base md:text-lg text-zinc-600 animate-item">{description1}</p>
+        <p className="text-base md:text-lg text-zinc-600 animate-item">{description2}</p>
       </div>
-
-      <div className="mt-24 space-y-0">
+      <div className="mt-12 md:mt-24 space-y-0">
         {services.map((service, index) => (
           <ServiceItem key={index} number={service.number} title={service.title} />
         ))}

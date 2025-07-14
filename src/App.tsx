@@ -24,7 +24,7 @@ function App() {
         <Header />
         <main>
           <Hero />
-          <div className="px-12 max-w-7xl mx-auto">
+          <div className="px-4 md:px-12 max-w-full md:max-w-7xl mx-0 md:mx-auto">
             <About />
             <Services />
             <FAQ />

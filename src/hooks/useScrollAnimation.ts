@@ -12,7 +12,7 @@ interface ScrollAnimationProps {
 }
 
 export function useScrollAnimation({ element, trigger, start = "top 80%", animations }: ScrollAnimationProps) {
-  const componentRef = useRef<HTMLElement | null>(null);
+  const componentRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     if (!componentRef.current) return;
